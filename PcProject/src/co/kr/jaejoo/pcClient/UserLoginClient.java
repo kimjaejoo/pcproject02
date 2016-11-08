@@ -24,18 +24,19 @@ public class UserLoginClient extends JFrame implements ActionListener {
 	private MainProcess main;
 
 	// 사용자의 로그인 화면을 생성하기 위해서 사용하는 변수들 - 변수의 사용은 기본생성자 안쪽에서 new함으로 사용한다.
-	JTextField loginId;
-	JPasswordField loginPw;
-	JButton loginBtn, joinBtn;
-	JPanel loginPanel = new JPanel();
+	private JTextField loginId;
+	private JPasswordField loginPw;
+	private JButton loginBtn, joinBtn, googleBtn;
+	private JPanel loginPanel = new JPanel();
 
-	Pattern patternEmail, patternId, patternTel;
-	Matcher matcherEmail, matcherId, matcherTel;
+	private Pattern patternEmail, patternId, patternTel;
+	private Matcher matcherEmail, matcherId, matcherTel;
 
 	// 정규표현식 사용하기
 	String emailregex = "[0-9a-zA-Z]+(.[_a-z0-9-]+)*@(?:\\w+\\.)+\\w+$";
 	String idregex = "^[a-zA-Z0-9]*$";
 	String telregex = "^01(?:0|1|[6-9])(?:\\d{3}|\\d{4})\\d{4}$";
+
 
 	public UserLoginClient() {
 		// 사용장 로그인화면 만들기 - 사용자의 화면에 맟줘 적당한 크기로 중앙에 들어오게 한다.
@@ -44,9 +45,12 @@ public class UserLoginClient extends JFrame implements ActionListener {
 		setSize(1600, 900); // 창의 기본적인 크기를 설정합니다
 		setLayout(null);
 		loginPanel.setLayout(null);
-		Dimension framesize = this.getSize();
+		
 
+		Dimension framesize = this.getSize();
 		Dimension windowsize = Toolkit.getDefaultToolkit().getScreenSize();
+		System.out.println(framesize);
+		System.out.println(windowsize);
 		int width = (windowsize.width - framesize.width) / 2;
 		int height = (windowsize.height - framesize.height) / 2;
 		setLocation(width, height);
@@ -57,15 +61,18 @@ public class UserLoginClient extends JFrame implements ActionListener {
 		loginPw = new JPasswordField();
 		loginBtn = new JButton("LOGIN");
 		joinBtn = new JButton("JOIN");
+		googleBtn = new JButton("GOOGLE SIGNUP");
 		loginId.setBounds(1100, 500, 200, 30);
 		loginPw.setBounds(1100, 500 + 50, 200, 30);
 		loginBtn.setBounds(1100, 500 + 50 + 50, 90, 30);
 		joinBtn.setBounds(1100 + 110, 500 + 50 + 50, 90, 30);
+		googleBtn.setBounds(1100, 500+50+50+50, 200, 30);
 		loginPanel.setBounds(width, height, 1600, 900);
 		loginPanel.add(loginId);
 		loginPanel.add(loginPw);
 		loginPanel.add(loginBtn);
 		loginPanel.add(joinBtn);
+		loginPanel.add(googleBtn);
 		add(loginPanel, "loginPanel");
 		loginBtn.addActionListener(this);
 		joinBtn.addActionListener(this);
@@ -94,13 +101,16 @@ public class UserLoginClient extends JFrame implements ActionListener {
 				if (email.equals("kjj0710@naver.com") && pw.equals("1234")) {
 					System.out.println("로그인을 시도합니다.");
 					System.out.println(main);
-					main.showFrame();
+					main.mainFrame();
 				}
 			} else {
 				System.out.println("틀림");
 			}
 		} else if (obj == joinBtn) {
 			System.out.println("회원가입 버튼을 누름");
+			main.joinFrame();
+		} else if (obj == googleBtn){
+			System.out.println("구글 아이디로 가입합니다.");
 		}
 	}
 

@@ -1,0 +1,6 @@
+package co.kr.jaejoo.model;
+
+public class Snippet {
+	String url = "jdbc:mysql://jsptest.cpkkponxntb7.ap-northeast-2.rds.amazonaws.com:3306/Tacademy?user=test&password=test1234";
+}
+

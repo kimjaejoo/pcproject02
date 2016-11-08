@@ -1,0 +1,32 @@
+package co.kr.jaejoo.singleton;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class MakeConnection {
+	private static MakeConnection mc = new MakeConnection();
+	
+	String url = "jdbc:mysql://jsptest.cpkkponxntb7.ap-northeast-2.rds.amazonaws.com:3306/Tacademy?user=test&password=test1234";
+	Connection conn;
+	
+	public MakeConnection() {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			conn = DriverManager.getConnection(url);
+			System.out.println("db연결성공");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public static MakeConnection getInstance(){
+		return mc;
+	}
+	
+	
+}

@@ -1,0 +1,7 @@
+package co.kr.jaejoo.singleton;
+
+public class MakeConnection {
+	private MakeConnection mc = new MakeConnection();
+	
+	String url = "jdbc:mysql://jsptest.cpkkponxntb7.ap-northeast-2.rds.amazonaws.com:3306/Tacademy?user=test&password=test1234";
+}

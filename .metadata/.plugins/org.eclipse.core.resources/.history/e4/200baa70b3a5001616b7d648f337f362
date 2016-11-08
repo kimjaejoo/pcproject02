@@ -1,0 +1,9 @@
+package co.ko.jaejoo.dao;
+
+import co.kr.jaejoo.singleton.MakeConnection;
+
+public class MemberDao {
+	public MemberDao() {
+		MakeConnection.getInstance().getConnection();
+	}
+}

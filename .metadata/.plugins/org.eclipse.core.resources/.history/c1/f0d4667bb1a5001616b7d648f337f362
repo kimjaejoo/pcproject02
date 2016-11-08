@@ -1,0 +1,5 @@
+package co.kr.jaejoo.singleton;
+
+public class MakeConnection {
+
+}

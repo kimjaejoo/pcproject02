@@ -5,7 +5,7 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-11-08T08:51:25Z</updated>
+  <updated>2016-11-08T08:51:00Z</updated>
   <entry>
     <title>This Week in Spring - November 8, 2016</title>
     <link rel="alternate" href="https://spring.io/blog/2016/11/08/this-week-in-spring-november-8-2016" />
@@ -14,7 +14,7 @@
       <name>Josh Long</name>
     </author>
     <id>tag:spring.io,2016-11-08:2687</id>
-    <updated>2016-11-08T08:51:25Z</updated>
+    <updated>2016-11-08T08:51:00Z</updated>
     <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I&amp;rsquo;m in London, England for &lt;a href="https://skillsmatter.com/conferences/7062-mucon-2015-the-microservices-conference"&gt;?Con&lt;/a&gt;, Antwerp, Belgium for &lt;a href="https://devoxx.be/"&gt;Devoxx&lt;/a&gt;, and Malm?, Sweden for &lt;a href="http://oredev.org/"&gt;Oredev&lt;/a&gt;. If you&amp;rsquo;re around, &lt;a href="http://twitter.com/starbuxman"&gt;ping me and say hi&lt;/a&gt;. &lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Spring Framework and Spring Boot ninja Stephane Nicoll just announced &lt;a href="https://spring.io/blog/2016/11/08/spring-framework-4-3-4-available-now"&gt;that Spring Framework 4.3.4, mostly bugfixes, is available now&lt;/a&gt;.&lt;/li&gt;
@@ -28,7 +28,7 @@
   &lt;li&gt;&lt;a href="http://twitter.com/unamanic"&gt;William Witt&lt;/a&gt; took one of my talks and adapted the examples to work in the &lt;a href="https://pivotal.io/pcf-dev"&gt;PCFDev Cloud Foundry environment&lt;/a&gt; and &lt;a href="https://unamanic.blogspot.be/2016/11/tutorial-bootiful-microservices-on-pcf.html"&gt;documented it step-by-step along with code - this is an &lt;em&gt;awesome&lt;/em&gt; resource!&lt;/a&gt; Good job William!&lt;/li&gt;
   &lt;li&gt;want to use JHipster and Stormpath together? Spring community &lt;a href="https://stormpath.com/blog/stormpath-jhipster-application"&gt;hero Matt Raible&amp;rsquo;s got just the fix&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;friend of the Spring community Michael Simons just put together a really interesting look at exposing a &lt;a href="http://info.michael-simons.eu/2016/11/02/an-http-api-for-analytic-queries/"&gt;JOOQ-based analytics API as a Spring Boot and Spring MVC-based REST API&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Pivotal&amp;rsquo;s own Ben Wilcox put together a very nice &lt;a href="https://github.com/joshlong/cf-cqrs-microservice-sampler"&gt;look at using Spring Boot and the Axon 2.0 framework together&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Pivotal&amp;rsquo;s own Ben Wilcock put together a very nice &lt;a href="https://github.com/joshlong/cf-cqrs-microservice-sampler"&gt;look at using Spring Boot and the Axon 2.0 framework together&lt;/a&gt;.&lt;/li&gt;
   &lt;li&gt;If you want to learn more about the new version of Axon 3.0, be &lt;a href="https://spring.io/blog/2016/10/25/webinar-bootiful-cqrs-with-axon-nov-16"&gt;sure to join Axon lead Allard Buijze and me for a webinar on November 16!&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
   </entry>
