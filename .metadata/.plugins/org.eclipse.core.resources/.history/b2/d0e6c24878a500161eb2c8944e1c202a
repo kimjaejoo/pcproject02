@@ -1,0 +1,20 @@
+package co.kr.jaejoo.pcClient;
+
+import java.awt.Dimension;
+
+import javax.swing.JFrame;
+
+@SuppressWarnings("serial")
+public class UserLoginClient extends JFrame {
+
+	public UserLoginClient() {
+		// 사용장 로그인화면 만들기 - 사용자의 화면에 맟줘 적당한 크기로 중앙에 들어오게 한다.
+		setTitle("사용자 로그인 화면 입니다.");
+		setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE); // 사용자가 x버튼을 눌렀을때 종료를 도와줍니다.
+		setSize(1600, 900); // 창의 기본적인 크기를 설정합니다
+		
+		Dimension framesize = this.getSize();
+		
+	}
+}

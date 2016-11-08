@@ -1,0 +1,19 @@
+package co.kr.jaejoo.pcClient;
+
+public class MainProcess {
+	
+	// 로그인
+	UserLoginClient loginClient;
+	// 회원가입
+	UserJoinClient joinClient;
+	
+	public static void main(String[] args) {
+		MainProcess main = new MainProcess();
+		main.loginClient = new UserLoginClient();
+		main.joinClient = new UserJoinClient();
+	}
+	
+	public void showFrame(){
+		loginClient.dispose();
+	}
+}

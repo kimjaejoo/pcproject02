@@ -1,0 +1,41 @@
+package co.kr.jaejoo.pcClient;
+
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+@SuppressWarnings("serial")
+public class UserLoginClient extends JFrame {
+	public static void main(String[] args) {
+		new UserLoginClient();
+	}
+	
+	// 사용자의 로그인 화면을 생성하기 위해서 사용하는 변수들 - 변수의 사용은 기본생성자 안쪽에서  new함으로 사용한다.
+	JTextField loginId, loginPw;
+	JButton loginBtn, joinBtn;
+	JPanel loginPanel;
+	
+	public UserLoginClient() {
+		// 사용장 로그인화면 만들기 - 사용자의 화면에 맟줘 적당한 크기로 중앙에 들어오게 한다.
+		setTitle("사용자 로그인 화면 입니다.");
+		setDefaultCloseOperation(EXIT_ON_CLOSE); // 사용자가 x버튼을 눌렀을때 종료를 도와줍니다.
+		setSize(1600, 900); // 창의 기본적인 크기를 설정합니다
+		setLayout(null);
+		Dimension framesize = this.getSize();
+		
+		Dimension windowsize = Toolkit.getDefaultToolkit().getScreenSize();
+		
+		setLocation((windowsize.width - framesize.width)/2, (windowsize.height - framesize.height) /2);
+		// frame을 정 중앙에 오게하기위한 계산식
+		
+		// textfield 오 버튼의 생성
+		loginId = new JTextField("사용자 아이디 입력부분");
+		loginPw = new JTextField("사용자 비번 입력부분");
+		setVisible(true);
+		
+	}
+}
