@@ -9,6 +9,7 @@ import java.util.regex.Pattern;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -23,6 +24,8 @@ public class UserLoginClient extends JFrame implements ActionListener {
 
 	private MainProcess main;
 
+	JOptionPane pane = new JOptionPane();
+	
 	// 사용자의 로그인 화면을 생성하기 위해서 사용하는 변수들 - 변수의 사용은 기본생성자 안쪽에서 new함으로 사용한다.
 	private JTextField loginId;
 	private JPasswordField loginPw;
@@ -49,8 +52,8 @@ public class UserLoginClient extends JFrame implements ActionListener {
 
 		Dimension framesize = this.getSize();
 		Dimension windowsize = Toolkit.getDefaultToolkit().getScreenSize();
-		System.out.println(framesize);
-		System.out.println(windowsize);
+		//System.out.println(framesize);
+		//System.out.println(windowsize);
 		int width = (windowsize.width - framesize.width) / 2;
 		int height = (windowsize.height - framesize.height) / 2;
 		setLocation(width, height);
@@ -80,6 +83,7 @@ public class UserLoginClient extends JFrame implements ActionListener {
 
 	}
 
+	@SuppressWarnings("static-access")
 	@Override // actionlistener의 메소드의 재정의
 	public void actionPerformed(ActionEvent e) {
 
@@ -105,6 +109,7 @@ public class UserLoginClient extends JFrame implements ActionListener {
 				}
 			} else {
 				System.out.println("틀림");
+				pane.showMessageDialog(this, "이메일 형식에 맞지않습니다");
 			}
 		} else if (obj == joinBtn) {
 			System.out.println("회원가입 버튼을 누름");
