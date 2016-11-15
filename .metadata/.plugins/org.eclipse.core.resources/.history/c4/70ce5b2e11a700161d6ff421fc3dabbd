@@ -1,0 +1,22 @@
+package co.ko.jaejoo.dao;
+
+public class MemberDTO {
+	
+	
+	private int membernum;
+	private String name ;
+	private String email;
+	private String password;
+	private String tel;
+	private String joindata;
+	private int admin;
+	private String starttime;
+	private String endtime;
+	
+	
+	public MemberDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+		
+}

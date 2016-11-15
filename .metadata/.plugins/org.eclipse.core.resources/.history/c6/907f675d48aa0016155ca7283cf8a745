@@ -1,0 +1,16 @@
+package co.kr.jaejoo.singleton;
+
+
+
+public class U {
+	
+	private static U u = new U();
+	private String url = "jdbc:mysql://jsptest.cpkkponxntb7.ap-northeast-2.rds.amazonaws.com:3306/Tacademy";
+	private String driver = "com.mysql.jdbc.Driver";
+	private String user = "test";
+	private String password = "test1234";
+	private String dbName = "Tacademy";
+	
+	
+	
+}

@@ -1,0 +1,27 @@
+package co.kr.jaejoo.singleton;
+
+import java.sql.Connection;
+
+public class U {
+	
+	private static U u = new U();
+	private String url = "jdbc:mysql://jsptest.cpkkponxntb7.ap-northeast-2.rds.amazonaws.com:3306/Tacademy";
+	private String driver = "com.mysql.jdbc.Driver";
+	private String user = "test";
+	private String password = "test1234";
+	private String dbName = "Tacademy";
+	private Connection conn;
+	
+	public static U getInstance(){
+		return u;
+	}
+	
+	public Connection getConnection(){
+		if(conn == null){
+			Class.forName(driver);
+		}
+	}
+	
+	
+	
+}

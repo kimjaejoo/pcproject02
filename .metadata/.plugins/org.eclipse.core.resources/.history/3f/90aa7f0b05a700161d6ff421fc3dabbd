@@ -1,0 +1,14 @@
+package co.kr.jaejoo.pcClient;
+
+import javax.swing.JFrame;
+
+public class UserMainClient extends JFrame {
+
+	// 사용자 권한이 0인 유저에게 띄어지는 창을 설정합니다.
+	
+	public UserMainClient(){
+		setTitle("사용자UI");
+		setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+}

@@ -1,0 +1,9 @@
+package co.kr.jaejoo.model;
+
+public class UserDao {
+	int membernum;
+	String name, email, password, tel, joindate, admin, totaltime;
+
+	
+
+}

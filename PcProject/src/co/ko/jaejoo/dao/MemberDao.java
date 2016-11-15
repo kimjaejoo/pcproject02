@@ -1,21 +1,18 @@
 package co.ko.jaejoo.dao;
 
-import java.io.BufferedReader;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import javax.servlet.http.HttpServletRequest;
-
-import org.apache.catalina.connector.Request;
 
 import com.google.gson.Gson;
 
 import co.kr.jaejoo.model.ReqSignUp;
 import co.kr.jaejoo.model.ResSignUp;
 import co.kr.jaejoo.model.UserDao;
-import co.kr.jaejoo.singleton.MakeConnection;
+import co.kr.jaejoo.util.MakeConnection;
 
 public class MemberDao {
 
@@ -25,6 +22,7 @@ public class MemberDao {
 	StringBuffer sb = new StringBuffer();
 
 	public MemberDao() {
+		// singleton으로 db에 연결합니다.
 		conn = MakeConnection.getInstance().getConnection();
 	}
 
@@ -34,10 +32,12 @@ public class MemberDao {
 	public void insert() {
 
 		// json을 사용하기 위함
+		// 원래의 json타입을 sb.toString 으로 받는다?? 그럼 .fromjson이 하는 일은?? 
 		String json = sb.toString();
 		Gson gson = new Gson();
 		ReqSignUp signUp = gson.fromJson(json, ReqSignUp.class);
-
+		
+		// 회원가입에 필요한 sql을 작성한다.
 		String sql = "INSERT INTO member (`name`,`email`,`password`,`tel`,`joindate`) "
 				   + "VALUES (?,?,?,?,now()) ; ";
 

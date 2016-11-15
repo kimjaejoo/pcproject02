@@ -1,0 +1,91 @@
+package co.ko.jaejoo.dao;
+
+public class MemberDTO {
+	
+	
+	private int membernum;
+	private String name ;
+	private String email;
+	private String password;
+	private String tel;
+	private String joindata;
+	private int admin;
+	private String starttime;
+	private String endtime;
+	
+	
+	public MemberDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public MemberDTO(int membernum, String name, String email, String password, String tel, String joindata, int admin,
+			String starttime, String endtime) {
+		super();
+		this.membernum = membernum;
+		this.name = name;
+		this.email = email;
+		this.password = password;
+		this.tel = tel;
+		this.joindata = joindata;
+		this.admin = admin;
+		this.starttime = starttime;
+		this.endtime = endtime;
+	}
+	
+	public int getMembernum() {
+		return membernum;
+	}
+	public void setMembernum(int membernum) {
+		this.membernum = membernum;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getTel() {
+		return tel;
+	}
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+	public String getJoindata() {
+		return joindata;
+	}
+	public void setJoindata(String joindata) {
+		this.joindata = joindata;
+	}
+	public int getAdmin() {
+		return admin;
+	}
+	public void setAdmin(int admin) {
+		this.admin = admin;
+	}
+	public String getStarttime() {
+		return starttime;
+	}
+	public void setStarttime(String starttime) {
+		this.starttime = starttime;
+	}
+	public String getEndtime() {
+		return endtime;
+	}
+	public void setEndtime(String endtime) {
+		this.endtime = endtime;
+	}
+	
+	
+}

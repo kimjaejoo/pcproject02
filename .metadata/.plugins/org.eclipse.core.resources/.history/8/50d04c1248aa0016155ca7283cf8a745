@@ -1,0 +1,10 @@
+package co.kr.jaejoo.singleton;
+
+
+
+public class U {
+	
+	private static U u = new U();
+	
+	
+}
