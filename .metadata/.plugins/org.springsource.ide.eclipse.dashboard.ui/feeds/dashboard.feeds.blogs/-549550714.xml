@@ -5,7 +5,95 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-11-14T16:18:44Z</updated>
+  <updated>2016-11-16T01:00:00Z</updated>
+  <entry>
+    <title>Spring Tips: Spring Cloud Data Flow</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/11/16/spring-tips-spring-cloud-data-flow" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2016-11-03:2679</id>
+    <updated>2016-11-16T01:00:00Z</updated>
+    <content type="html">&lt;p&gt;Hi Spring fans! In this tip, we&amp;rsquo;ll quickly look at how to build stream-processing pipelines with Spring Cloud Data Flow&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/GaHgRw-3K84" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - November 15th, 2016</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/11/15/this-week-in-spring-november-15th-2016" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2016-11-15:2696</id>
+    <updated>2016-11-15T20:26:00Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! Time sure is flying! We&amp;rsquo;ve got so much to get into this week. Can you believe we&amp;rsquo;re staring down 2017? We&amp;rsquo;ve got so much to cover so let&amp;rsquo;s get to it! &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;I hope you&amp;rsquo;ll join Axon-framework lead Allard Buijze and I tomorrow when we introduce &lt;a href="https://spring.io/blog/2016/10/25/webinar-bootiful-cqrs-with-axon-nov-16"&gt;how to build CQRS-centric applications with the Axon Framework and Spring Boot&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;More SpringOne Platform 2016 talks are available, and if you&amp;rsquo;re interested in how Spring and reactive programming are coming together you&amp;rsquo;ll want to hear directly from Rossen about &lt;a href="https://spring.io/blog/2016/11/15/springone-platform-2016-replay-from-imperative-to-reactive-web-apps"&gt;where the team is starting it&amp;rsquo;s journey!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Anyone that is working in microservices, should watch this &lt;em&gt;amazing&lt;/em&gt; SpringOne Platform 2016 replay showing us how &lt;a href="https://spring.io/blog/2016/11/15/springone-platform-2016-replay-ddd-rest-domain-driven-apis-for-the-web"&gt;Oliver Gierke applies Domain Driven Design concepts to creating REST APIs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;be sure to check out this blog and the corresponding webinar from our very own Stephane Nicoll and Vaadin&amp;rsquo;s Matti Tahvonen as they look at how to &lt;a href="https://spring.io/blog/2016/11/15/vaadin-spring-1-1-build-web-uis-that-hook-right-to-your-java-backend"&gt;build a good looking web application user interface that integrates seamlessly with your backend Spring services&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring IO Platform lead Andy Wilkinson has just &lt;a href="https://spring.io/blog/2016/11/14/spring-io-platform-athens-sr1"&gt;released Spring IO Platform Athens SR1&lt;/a&gt; featuring lots of updates&lt;/li&gt;
+  &lt;li&gt;Spring Data Geode lead John Blum just released &lt;a href="https://spring.io/blog/2016/11/10/spring-data-geode-1-0-0-incubating-release-released"&gt;Spring Data Geode 1.0.0.INCUBATING-RELEASE Released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Security lead Rob Winch &lt;a href="https://spring.io/blog/2016/11/10/spring-security-4-2-0-released"&gt;just announced Spring Security 4.2.0&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Spring Cloud Data Flow co-founder &lt;a href="https://spring.io/blog/2016/11/09/spring-cloud-data-flow-1-1-rc1-released"&gt;Dr. Mark Pollack just announced Spring Cloud Data Flow 1.1 RC1 Released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;last week, in another installment of the Spring Tips series, we looked at how to build &lt;a href="https://spring.io/blog/2016/11/09/spring-tips-spring-cloud-stream"&gt;messaging-based microservices using Spring Cloud Stream&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Data Geode lead John Blum just released &lt;a href="https://spring.io/blog/2016/11/08/spring-boot-1-4-2-available-no"&gt;Spring Data Geode 1.0.0.INCUBATING-RELEASE Released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;want to learn about event-sourcing? Take a look &lt;a href="https://spring.io/blog/2016/11/08/cqrs-and-event-sourcing-with-jakub-pilimon"&gt;at this groovy recorded Google Hangout with Jakub Pilimon&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Integration and Spring AMQP lead Gary Russell just &lt;a href="https://spring.io/blog/2016/11/08/spring-amqp-and-spring-integration-core-java-dsl-maintenance-releases-available"&gt;announced Spring AMQP and Spring Integration Core &amp;amp; Java DSL Maintenance Releases Available&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring framework lead and maestro Juergen Hoeller just announced &lt;a href="https://spring.io/blog/2016/11/08/spring-framework-5-0-m3-released"&gt;&lt;br/&gt;Spring Framework 5.0 M3 released&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Create a new &lt;a href="https://github.com/atomist-project-templates/spring-cloud-config-server"&gt;Spring Cloud Config Server&lt;/a&gt; with this powerful new &lt;a href="http://atomist.com"&gt;Atomist&lt;/a&gt; generator&lt;/li&gt;
+  &lt;li&gt;I&amp;rsquo;ve heard &lt;a href="https://twitter.com/craigburke1/status/798574551156326400"&gt;good things&lt;/a&gt; about &lt;a href="https://github.com/alvarosanchez/grails-spring-security-rest"&gt;Alvaro Sanchez&amp;rsquo;s Grails Spring Security REST plugin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Nice to see Spring Boot retain its &lt;a href="https://www.thoughtworks.com/radar/languages-and-frameworks/spring-boot"&gt;spot in the &lt;em&gt;Adopt&lt;/em&gt; column in the latest installment of the Thougthworks Radar&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;this Japanese-language post looks &lt;a href="http://kimulla.hatenablog.com/entry/2016/05/08/SpringSecurity_%E6%A8%A9%E9%99%90%E3%81%AB%E5%9F%BA%E3%81%A5%E3%81%84%E3%81%A6%E8%AA%8D%E5%8F%AF%E5%87%A6%E7%90%86%E3%82%92%E3%81%99%E3%82%8B"&gt;like it does a good job introducing Spring Security&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;this isn&amp;rsquo;t Spring-specific at all, but given that we&amp;rsquo;ve got a lot of other content this week on event-sourcing and bounded contexts and microservices, &lt;a href="http://www.russmiles.com/essais/going-events-first-for-microservices-with-event-storming-and-ddd"&gt;you might appreciate Russ Miles&amp;rsquo; latest musings on event-sourcing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;be sure to join this webinar from Tino Tereshko (big data lead, Google) and Joshua McKenty (senior director, platform engineering at Pivotal) on how to use &lt;a href="http://pivotal.io/platform/webinar/pivotal-cloud-foundry-and-google-bigquery-cloud-vision-api-10am"&gt;Google&amp;rsquo;s BigQuery API from within Pivotal Cloud Foundry running on Google Compute Engine&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne Platform 2016 Replay: DDD &amp; REST - Domain Driven APIs for the web</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/11/15/springone-platform-2016-replay-ddd-rest-domain-driven-apis-for-the-web" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2016-11-15:2697</id>
+    <updated>2016-11-15T12:57:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne Platform 2016.&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/ddd-rest-domain-driven-apis-for-the-web"&gt;http://www.slideshare.net/SpringCentral/ddd-rest-domain-driven-apis-for-the-web&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;While Domain Driven Design is supposed to take care of complexity in the very core of software, REST is usually treated a plain remoting technology. In this talk we&amp;rsquo;re going to explore some commonalities of the two when it comes to the design of both the domain and resources. We&amp;rsquo;re going to discover how a good domain design is essential to build a great REST API in the first place and which means REST provides to make your APIs more domain driven. From all of the building blocks of DDD, the talk identifies the ones most important when it comes to building a good REST API: we&amp;rsquo;re going to look at aggregates as natural boundaries for representations, repositories as the backing foundation for collection resources and how hypermedia allows to make domain specific state transitions explicit.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/NdZqeAAIHzc" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne Platform 2016 Replay: From Imperative To Reactive Web Apps</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/11/15/springone-platform-2016-replay-from-imperative-to-reactive-web-apps" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2016-11-15:2698</id>
+    <updated>2016-11-15T12:56:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne Platform 2016.&lt;br/&gt;Speaker: Rossen Stoyanchev&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/imperative-to-reactive-web-applications"&gt;http://www.slideshare.net/SpringCentral/imperative-to-reactive-web-applications&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The reactive programming model involves a fundamental shift from imperative to non-blocking logic and understanding what that means on the most basic level is an essential and required first step. In this talk we&amp;rsquo;ll start by introducing reactive programming and discuss how it impacts application design. Then we&amp;rsquo;ll take a look at the building blocks from a Java developer&amp;rsquo;s perspective. Finally we&amp;rsquo;ll complete the picture by checking out the upcoming Spring 5 support for reactive web applications.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/a4CxFyZRpyc" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>Vaadin Spring 1.1 - build web UIs that hook right to your Java backend</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/11/15/vaadin-spring-1-1-build-web-uis-that-hook-right-to-your-java-backend" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>St?phane Nicoll</name>
+    </author>
+    <id>tag:spring.io,2016-11-15:2695</id>
+    <updated>2016-11-15T11:01:06Z</updated>
+    <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;This post is a guest post by community member &lt;a href="https://twitter.com/MattiTahvonen"&gt;Matti Tahvonen (@MattiTahvonen)&lt;/a&gt;, who works as a developer advocate in &lt;a href="https://vaadin.com"&gt;Vaadin Ltd&lt;/a&gt;, the company that originally developed Vaadin Framework and provides commercial services and extensions for it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The first stable release of the official Spring integration library for Vaadin was released a bit over a year ago. The feedback has been great and many Spring developers, who have wanted to stay on the safe ¡°backend side¡±, have discovered a new way to use their existing Java skills to build good-looking web UIs. Using Vaadin Spring, your UI code lives in Spring managed beans and the integration with your Spring based backend becomes trivial.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://vaadin.com/blog/-/blogs/vaadin-spring-1-1-is-out"&gt;Vaadin Spring 1.1&lt;/a&gt; is a first feature release and was published last week. It provides a handy &lt;code&gt;SpringNavigator&lt;/code&gt; (auto-configure in Spring Boot apps), which makes it easier to create ¡°top level navigation¡± for your larger Vaadin Spring-based UI. Vaadin Spring 1.1.0 and previous 1.0.x releases have also fixed a number of bugs, so existing Vaadin Spring users should definitely upgrade their versions.&lt;/p&gt;
+&lt;p&gt;If you are new to Vaadin or want some handy Spring tips, you should definitely also check out our recent joint webinar ¡°Java web apps with Spring and Vaadin¡±, hosted by St?phane Nicoll (Pivotal) and Matti Tahvonen (Vaadin). In addition to Vaadin related stuff, the webinar contains a bunch of productivity tips related to devtools, consuming RESTful services and maintaining your database structure using Flyway. The sample app that we used is also &lt;a href="https://github.com/mstahv/spring-data-vaadin-crud"&gt;available on github&lt;/a&gt;.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/6FjjVKmEdY4" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;If you are more of a ¡°learn by doing¡± type of person and got interested in using Vaadin Framework in your Spring web app, refer to &lt;a href="https://vaadin.com/spring"&gt;vaadin.com/spring&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Spring IO Platform Athens-SR1</title>
     <link rel="alternate" href="https://spring.io/blog/2016/11/14/spring-io-platform-athens-sr1" />
@@ -614,95 +702,5 @@ examples:&#xD;
 &lt;p&gt;The &lt;code&gt;kafka&lt;/code&gt; process also starts ZooKeeper on port 2181. Kafka is used for the Spring Cloud Bus.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;h2&lt;/code&gt; database is available on port 9096 with the following JDBC URL: &lt;code&gt;jdbc:h2:tcp://localhost:9096/./target/test&lt;/code&gt;. The H2 URL can be customized via the &lt;code&gt;spring.datasource.url&lt;/code&gt; property.&lt;/p&gt;&lt;h3&gt;&lt;a href="#conclusion" class="anchor" name="conclusion"&gt;&lt;/a&gt;Conclusion&lt;/h3&gt;
 &lt;p&gt;Please check out the project on &lt;a href="https://github.com/spring-cloud/spring-cloud-cli/tree/master/spring-cloud-launcher"&gt;GitHub&lt;/a&gt;. The team would appreciate issues and enhancement requests from the community.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Data Flow for Kubernetes 1.1 M2 released</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/11/02/spring-cloud-data-flow-for-kubernetes-1-1-m2-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Thomas Risberg</name>
-    </author>
-    <id>tag:spring.io,2016-11-02:2677</id>
-    <updated>2016-11-02T21:00:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team, I am pleased to announce the release of the second milestone of &lt;em&gt;Spring Cloud Data Flow for Kubernetes&lt;/em&gt; 1.1.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Spring Cloud Data Flow for Kubernetes&lt;/em&gt; provides support for orchestrating long-running (streaming) and short-lived (task/batch) data microservices on Kubernetes.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; A great way to start using this new release(s) is to follow the &lt;a href="http://cloud.spring.io/spring-cloud-dataflow/#spring-cloud-data-flow-server-implementations"&gt;release matrix&lt;/a&gt; on the project page, which includes the download coordinates and the links to the reference guide.&lt;/p&gt;
-&lt;p&gt;The most significant changes for this release can be found in the &lt;em&gt;Spring Cloud Deployer for Kubernetes&lt;/em&gt; project. Thanks to several community contributions, we have significantly improved the customization options available for launching Kubernetes apps. We now support resource requests in addition to resource limits and the imagePullPolicy can now be specified. You can also specify the startup command and the entryPoint type used for the Docker image as well as override exposed ports and specify environment variables when deploying apps. For detailed list of deployer improvements review the changes listed in the &lt;a href="https://github.com/spring-cloud/spring-cloud-deployer-kubernetes/milestone/7?closed=1"&gt;Spring Cloud Deployer for Kubernetes 1.1.0.M1 marker&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The 1.1.0.M2 release builds on the recent &lt;a href="https://spring.io/blog/2016/10/18/spring-cloud-data-flow-1-1-m2-released"&gt;1.1 M2 release&lt;/a&gt; of the core Spring Cloud Data Flow project.&lt;/p&gt;
-&lt;p&gt;Review the &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-server-kubernetes/milestone/7?closed=1"&gt;Spring Cloud Data Flow for Kubernetes 1.1.0.M2 marker&lt;/a&gt; to learn more about the incremental improvements.&lt;/p&gt;
-&lt;p&gt;Docker images containing the &lt;em&gt;Spring Cloud Data Flow Server for Kubernetes&lt;/em&gt; for all releases are available from the &lt;a href="https://hub.docker.com/r/springcloud/spring-cloud-dataflow-server-kubernetes/tags/"&gt;Docker Hub repo&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;To get started using &lt;em&gt;Spring Cloud Data Flow for Kubernetes&lt;/em&gt; &lt;a href="http://docs.spring.io/spring-cloud-dataflow-server-kubernetes/docs/1.1.0.M2/reference/htmlsingle/#_getting_started"&gt;follow the steps&lt;/a&gt; outlined in the reference documentation.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Camden.SR2 is available</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/11/02/spring-cloud-camden-sr2-is-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Ryan Baxter</name>
-    </author>
-    <id>tag:spring.io,2016-11-02:2675</id>
-    <updated>2016-11-02T19:46:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team, I am pleased to announce that Service Release 2 of the &lt;a href="http://cloud.spring.io"&gt;Spring Cloud Camden&lt;/a&gt; Release Train is available today. The release can be found in our &lt;a href="http://repo.spring.io/release"&gt;Spring Release repository&lt;/a&gt; and &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22spring-cloud-dependencies%22"&gt;Maven Central&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This release includes primarily bug fixes.&lt;/p&gt;&lt;h4&gt;&lt;a href="#the-following-modules-were-updated-as-part-of-camden-sr2" class="anchor" name="the-following-modules-were-updated-as-part-of-camden-sr2"&gt;&lt;/a&gt;The following modules were updated as part of Camden.SR2:&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Cloud Netflix &lt;a href="https://github.com/spring-cloud/spring-cloud-netflix/milestone/32?closed=1"&gt;1.2.2.RELEASE&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Cloud Consul &lt;a href="https://github.com/spring-cloud/spring-cloud-consul/milestone/12?closed=1"&gt;1.1.1.RELEASE&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Cloud CLI &lt;a href="https://github.com/spring-cloud/spring-cloud-cli/milestone/12?closed=1"&gt;1.2.2.RELEASE&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Cloud Streams &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-binder-rabbit/milestone/5?closed=1"&gt;Brooklyn.SR1&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;And, as always, we welcome feedback: either on &lt;a href="https://github.com/spring-cloud"&gt;GitHub&lt;/a&gt;, on &lt;a href="https://gitter.im/spring-cloud/spring-cloud"&gt;gitter&lt;/a&gt;, on &lt;a href="http://stackoverflow.com/questions/tagged/spring-cloud"&gt;Stack Overflow&lt;/a&gt;, or on &lt;a href="https://twitter.com/SpringCloudOSS"&gt;Twitter&lt;/a&gt;.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Tips: Spring-Aware Beans</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/11/02/spring-tips-spring-aware-beans" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2016-11-02:2676</id>
-    <updated>2016-11-02T17:39:04Z</updated>
-    <content type="html">&lt;p&gt;Speaker: &lt;a href="https://www.twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Hi Spring fans! In this tip, we&amp;rsquo;ll look at how to create components that are aware of the Spring container&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/O8nIzE99BJY" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - November 1, 2016</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/11/01/this-week-in-spring-november-1-2016" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2016-11-01:2674</id>
-    <updated>2016-11-01T08:12:00Z</updated>
-    <content type="html">&lt;p&gt;Hello and welcome back to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! Can you believe we&amp;rsquo;re now two weeks until 2017 - time sure is flying! This week I&amp;rsquo;m in Los Angeles, California, USA, and then it&amp;rsquo;s off to London for &lt;a href="https://skillsmatter.com/conferences/7412-con-2016-the-microservices-conference"&gt;?Con 2016&lt;/a&gt;, &lt;a href="http://devoxx.be/"&gt;Devoxx Belgium&lt;/a&gt; and &lt;a href="http://oredev.org/"&gt;Oredev&lt;/a&gt;. If you&amp;rsquo;re at any of these events be sure to say hi! Now, without further ado let&amp;rsquo;s get to it!&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;first, be sure to check out this &lt;a href="https://spring.io/blog/2016/10/31/webinar-replay-consumer-driven-contracts-and-your-microservice-architecture"&gt;webinar on Spring Cloud Contract by Marcin Grzejszczak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Data ninja Mark Paluch just &lt;a href="https://spring.io/blog/2016/10/28/spring-vault-and-spring-cloud-vault-1-0-0-m1-are-now-available"&gt;announced that Spring Vault and Spring Cloud Vault 1.0.0.M1 are now available&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Security lead &lt;a href="https://spring.io/blog/2016/10/27/spring-security-4-2-rc1"&gt;Rob Winch announced the release of Spring Security 4.2.0.RC1&lt;/a&gt; with &lt;a href="http://docs.spring.io/spring-security/site/docs/4.2.x/reference/htmlsingle/#new"&gt;lots of new features&lt;/a&gt; and updates.&lt;/li&gt;
-  &lt;li&gt;In last week&amp;rsquo;s &amp;ldquo;Spring Tips&amp;rdquo; installment I looked at circuit breakers in Spring, &lt;a href="https://spring.io/blog/2016/10/27/spring-tips-circuit-breakers"&gt;including the Hystrix circuit breaker and the new circuit breaker functionality in Spring Retry&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;related, Spring Cloud team member Ryan Baxter shared new &lt;a href="https://github.com/spring-cloud/spring-cloud-commons/blob/master/docs/src/main/asciidoc/spring-cloud-commons.adoc#retrying-failed-requests"&gt;support for retrying Ribbon-loadbalanced requests&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Cloud Pipelines lead Marcin Grzejszczak just &lt;a href="https://spring.io/blog/2016/10/26/spring-cloud-pipelines-1-0-0-m2-released"&gt;announced Spring Cloud Pipelines M2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Security and Spring Security LDAP 2.2.0 lead &lt;a href="https://spring.io/blog/2016/10/25/spring-ldap-2-2-0-released"&gt;Rob Winch just announced Spring LDAP 2.2.0&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;check out this post on &lt;a href="http://engineering.pivotal.io/post/spring-cloud-data-flow-sink/"&gt;the Pivotal engineering blog on building Spring Cloud Data Flow sinks&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;the Cloud Foundry foundation is helping to &lt;a href="http://thenewstack.io/cloud-foundrys-service-broker-api-role-in-kubernetes-and-open-source-platforms/"&gt;standardize the service broker model from Cloud Foundry to make it work for Kubernetes&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;our pal &lt;a href="http://twitter.com/making"&gt;@making&lt;/a&gt; has put together a &lt;a href="https://github.com/making/cf-task-flyway-migration"&gt;useful one-off task for Concourse CI to run a Flyway database migration&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/grails/grails-core"&gt;Grails Framework 3.2.2, based on Spring Boot, is now available&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;this printable ZeroTurnaround cheat sheet &lt;a href="https://zeroturnaround.com/rebellabs/spring-framework-annotations-cheat-sheet/"&gt;detailing some of the common Spring ecosystem annotations and how they help&lt;/a&gt; is worth a look though, in our opinion, some of the annotations are poorly explained.&lt;/li&gt;
-&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>Webinar Replay: Consumer Driven Contracts and Your Microservice Architecture</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/10/31/webinar-replay-consumer-driven-contracts-and-your-microservice-architecture" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2016-10-31:2673</id>
-    <updated>2016-10-31T16:01:00Z</updated>
-    <content type="html">&lt;p&gt;Speaker: Marcin Grzejszczak&lt;br/&gt;Slides: &lt;a href="http://www.slideshare.net/MarcinGrzejszczak/consumer-driven-contracts-and-your-microservice-architecture-67641511"&gt;http://www.slideshare.net/MarcinGrzejszczak/consumer-driven-contracts-and-your-microservice-architecture-67641511&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;TDD introduced many improvements into the development process, but in our opinion the biggest impact relates to code design. Looking at the code from the usage perspective (by first writing an acceptance test) allows us to focus on usability rather than concrete implementation. Unfortunately, we usually rest on our laurels not trying to uplift this practice to the architecture level. &lt;/p&gt;
-&lt;p&gt;This presentation will show you how you can use the Spring Cloud Contract Verifier functionality in order to have a fully automated solution to stub your HTTP / Messaging collaborators. Just by adding proper configuration, you&amp;rsquo;ll surround the microservices you are testing with faked stubs that are tested against their producer, making much more realistic tests. &lt;/p&gt;
-&lt;p&gt;We will write a system using the CDC approach together with Spring Boot, Spring Cloud and Spring Cloud Contract Verifier. I&amp;rsquo;ll show you how easy it is to write applications that have a consumer-driven API, allowing a developer to speed up the time for writing better quality software.&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/4fJiz0woxAc" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
   </entry>
 </feed>

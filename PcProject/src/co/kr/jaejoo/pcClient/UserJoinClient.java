@@ -121,10 +121,10 @@ public class UserJoinClient extends JFrame implements ActionListener {
 
 			
 			
-			main.loginFrame();
+			main.loginFrame(this);
 		}else if(obj == cancleBtn){
 			System.out.println("회원가입을 취소합니다");
-			main.loginFrame();
+			main.loginFrame(this);
 		}
 		
 	}

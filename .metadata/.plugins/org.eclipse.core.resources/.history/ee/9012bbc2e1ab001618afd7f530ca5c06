@@ -1,0 +1,23 @@
+package co.kr.jaejoo.pcClient;
+
+import java.awt.image.BufferedImage;
+
+import javax.swing.JPanel;
+
+public class PanSeat extends JPanel{
+
+	private BufferedImage image = null;
+	private int numSeat;
+	
+	public PanSeat(int numSeat) {
+		this.numSeat = numSeat;
+		image("gameOff");
+		
+	}
+
+	private void image(String fileName) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

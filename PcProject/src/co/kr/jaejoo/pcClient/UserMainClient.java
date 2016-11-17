@@ -13,12 +13,16 @@ import org.apache.catalina.connector.Response;
 
 import co.ko.jaejoo.dao.Member;
 import co.ko.jaejoo.dao.MemberDTO;
+import co.kr.jaejoo.model.UserDao;
 
 public class UserMainClient extends JFrame {
 
 	// 사용자 권한이 0인 유저에게 띄어지는 창을 설정합니다.
-	UserLoginClient loginClient = new UserLoginClient();
+	public UserLoginClient loginClient = new UserLoginClient();
 	Member member = new Member();
+	
+	//
+	private UserDao UserDao;
 	
 	JLabel seatNo, name , time , coin;
 	
@@ -52,4 +56,11 @@ public class UserMainClient extends JFrame {
 		
 		
 	}
+
+	public void setUserDao(UserDao userDao) {
+		UserDao = userDao;
+	}
+	
+	
+	
 }

@@ -1,0 +1,13 @@
+package co.kr.jaejoo.pcClient;
+
+public class Setting {
+	
+    private static Setting instance = new Setting();
+    
+    public static Setting getInstance() {
+        return instance;
+    }
+ 
+    private Setting() {
+    }
+}

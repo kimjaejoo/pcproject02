@@ -1,0 +1,13 @@
+package co.kr.jaejoo.field;
+
+public class RefUser {
+	
+	// 리플렉션을 하기위한 클래스 입니다. 
+	// 하나의 클래스에서 다른클래스의 정보를 알아낼수 있는 개념
+	// 또한 그 클래스로 만든객체까지 주어준다면 그 객체들의 값을 바꿀수 있는 것
+	
+	public static void main(String[] args) {
+		// 지도클래스 선언
+		Class<?> clazz = RefObject.class;
+	}
+}

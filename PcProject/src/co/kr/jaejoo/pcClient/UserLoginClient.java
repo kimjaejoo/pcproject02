@@ -19,10 +19,18 @@ import javax.swing.JTextField;
 import co.ko.jaejoo.dao.Member;
 import co.ko.jaejoo.dao.MemberDTO;
 import co.kr.jaejoo.model.ReqSignUp;
+import co.kr.jaejoo.model.UserDao;
 
 @SuppressWarnings("serial")
 public class UserLoginClient extends JFrame implements ActionListener {
 
+	public static void main(String[] args) {
+		UserLoginClient loginClient = new UserLoginClient();
+		UserMainClient mainClient = new UserMainClient();
+		loginClient.setDao(new UserDao());
+		
+	}
+	
 	private MainProcess main;
 
 	JOptionPane pane = new JOptionPane();
@@ -35,6 +43,9 @@ public class UserLoginClient extends JFrame implements ActionListener {
 
 	private Pattern patternEmail;
 	private Matcher matcherEmail;
+	
+	private UserDao dao;
+
 
 	private Member mem = new Member();
 
@@ -63,8 +74,8 @@ public class UserLoginClient extends JFrame implements ActionListener {
 		// frame을 정 중앙에 오게하기위한 계산식
 
 		// textfield 오 버튼의 생성
-		loginId = new JTextField();
-		loginPw = new JPasswordField();
+		loginId = new JTextField("kjj0710@naver.com");
+		loginPw = new JPasswordField("1111");
 		loginBtn = new JButton("LOGIN");
 		joinBtn = new JButton("JOIN");
 		googleBtn = new JButton("GOOGLE SIGNUP");
@@ -99,8 +110,6 @@ public class UserLoginClient extends JFrame implements ActionListener {
 
 			dto = mem.loginData(email, pw);
 			
-			
-			
 			// 아이디는 정규표현식을 사용하여 작성합니다.
 			patternEmail = Pattern.compile(emailregex);
 			matcherEmail = patternEmail.matcher(email);
@@ -116,7 +125,7 @@ public class UserLoginClient extends JFrame implements ActionListener {
 				System.out.println("형식이 일치"); // 형식이 일치하면 아래의 제어문을 실행함
 				// admin의 값을 가지고오는 로그인형식을 추가하자!! 아이디와 비번을 입력했을 때 조회되는 admin값을
 				// 이용하여 어느창을 띄울지 정한다.
-				if (email.equals(dto.getEmail()) && pw.equals(dto.getPassword())) {
+				if (email.equals(dto.getEmail()) &&  pw.equals(dto.getPassword())) {
 					System.out.println("아이디와 비밀번호가 일치하여 실행합니다.");
 					
 					if (dto.getAdmin() == 1) {
@@ -126,7 +135,11 @@ public class UserLoginClient extends JFrame implements ActionListener {
 						
 						// 사용자가 로그인을 시도하면 다른 클래스에 적정한 값을 보내야합니다.
 						// 다른클래스로 보내는 값은 사용자의 번호입니다 값을 넘기기 위해서는 이 클래스안에 setter, getter가 필요합니다.
-						main.mainFrame(); 
+						try {
+							main.mainFrame();
+						} catch (Exception e1) {
+							e1.printStackTrace();
+						} 
 						
 					} else if (dto.getAdmin() == 0) {
 						System.out.println(dto.getEmail() + " / " + dto.getPassword());
@@ -157,6 +170,10 @@ public class UserLoginClient extends JFrame implements ActionListener {
 
 	public void setMain(MainProcess main) {
 		this.main = main;
+	}
+
+	public void setDao(UserDao dao) {
+		this.dao = dao;
 	}
 
 }
