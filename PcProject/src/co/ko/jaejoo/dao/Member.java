@@ -40,7 +40,7 @@ public class Member {
 
 		sb.setLength(0);
 
-		sb.append(" SELECT `name`, `email`, `password`, `tel`, `joindata`, `totaltime` ");
+		sb.append(" SELECT `membernum`, `name`, `nickname`, `email`, `password`, `tel`, `joindata`, `admin`, `totaltime` ");
 
 		sb.append(" FROM `pcproject`.`member` ");
 
@@ -57,6 +57,8 @@ public class Member {
 				int membernum = rs.getInt("membernum");
 
 				String name = rs.getString("name");
+				
+				String nickname = rs.getString("nickname");
 
 				String email = rs.getString("email");
 
@@ -68,9 +70,9 @@ public class Member {
 
 				int admin = rs.getInt("admin");
 
-				String total = rs.getString("totaltime");
+				String totaltime = rs.getString("totaltime");
 
-				MemberDTO memberdto = new MemberDTO(membernum, name, email, password, tel, joindata, admin, total);
+				MemberDTO memberdto = new MemberDTO(membernum, name, nickname, email, password, tel, joindata, admin, totaltime);
 
 				list.add(memberdto);
 
@@ -94,7 +96,7 @@ public class Member {
 
 		sb.setLength(0);
 
-		sb.append(" SELECT `name`, `email`, `password`, `tel`, `joindata`, `admin`, `totaltime` ");
+		sb.append(" SELECT `membernum`, `name`, `nickname`, `email`, `password`, `tel`, `joindata`, `admin`, `totaltime` ");
 
 		sb.append(" FROM `pcproject`.`member` ");
 
@@ -117,6 +119,8 @@ public class Member {
 				int membernum = rs.getInt("membernum");
 
 				String name = rs.getString("name");
+				
+				String nickname = rs.getString("nickname");
 
 				String tel = rs.getString("tel");
 
@@ -126,7 +130,7 @@ public class Member {
 
 				String totaltime = rs.getString("totaltime");
 
-				MemberDTO memberdto = new MemberDTO(membernum, name, email, password, tel, joindata, admin, totaltime);
+				MemberDTO memberdto = new MemberDTO(membernum, name, nickname, email, password, tel, joindata, admin, totaltime);
 
 				list.add(memberdto);
 
@@ -145,7 +149,7 @@ public class Member {
 
 		sb.setLength(0);
 
-		sb.append(" SELECT `membernum`, `name`, `email`, `password`, `tel`, `joindata`, `totaltime` ");
+		sb.append(" SELECT `membernum`, `nickname`, `name`, `email`, `password`, `tel`, `joindata`, `admin`, `totaltime` ");
 
 		sb.append(" FROM `pcproject`.`member` ");
 
@@ -162,6 +166,8 @@ public class Member {
 			while (rs.next()) {
 
 				String name = rs.getString("name");
+				
+				String nickname = rs.getString("nickname");
 
 				String email = rs.getString("email");
 
@@ -175,7 +181,7 @@ public class Member {
 
 				String totaltime = rs.getString("totaltime");
 
-				memberdto = new MemberDTO(membernum, name, email, password, tel, joindata, admin, totaltime);
+				memberdto = new MemberDTO(membernum, name, nickname, email, password, tel, joindata, admin, totaltime);
 
 			}
 
@@ -195,7 +201,7 @@ public class Member {
 
 		sb.setLength(0);
 
-		sb.append(" SELECT `membernum`, `name`, `email`, `password`, `tel`, `joindata`, `admin`, `totaltime` ");
+		sb.append(" SELECT `membernum`, `nickname`, `name`, `email`, `password`, `tel`, `joindata`, `admin`, `totaltime` ");
 
 		sb.append(" FROM `pcproject`.`member` ");
 
@@ -216,6 +222,8 @@ public class Member {
 				int membernum = rs.getInt("membernum");
 
 				String name = rs.getString("name");
+				
+				String nickname = rs.getString("nickname");
 
 				String tel = rs.getString("tel");
 
@@ -225,7 +233,7 @@ public class Member {
 
 				String totaltime = rs.getString("totaltime");
 
-				memberdto = new MemberDTO(membernum, name, email, password, tel, joindata, admin, totaltime);
+				memberdto = new MemberDTO(membernum, name, nickname, email, password, tel, joindata, admin, totaltime);
 
 			}
 		} catch (SQLException e) {
@@ -238,18 +246,19 @@ public class Member {
 
 		sb.setLength(0);
 
-		sb.append("INSERT INTO `pcproject`.`member` (`name`, `email`, `password`, `tel`, `joindata`, `totaltime`) ");
+		sb.append("INSERT INTO `pcproject`.`member` (`name`, `nickname`, `email`, `password`, `tel`, `joindata`, `totaltime`) ");
 
-		sb.append("VALUES (?, ?, ?, ?, now(), null) ;");
+		sb.append("VALUES (?, ? ,?, ?, ?, now(), null) ;");
 		
 		try {
 
 			pstmt = conn.prepareStatement(sb.toString());
 
 			pstmt.setString(1, memberdto.getName());
-			pstmt.setString(2, memberdto.getEmail());
-			pstmt.setString(3, memberdto.getPassword());
-			pstmt.setString(4, memberdto.getTel());
+			pstmt.setString(2, memberdto.getNickname());
+			pstmt.setString(3, memberdto.getEmail());
+			pstmt.setString(4, memberdto.getPassword());
+			pstmt.setString(5, memberdto.getTel());
 
 			pstmt.executeUpdate();
 
@@ -266,7 +275,7 @@ public class Member {
 
 		sb.append(" UPDATE `pcproject`.`member`  ");
 
-		sb.append(" SET `name`='?', `email`='?', `password`='?', `tel`='?' ");
+		sb.append(" SET `name`='?', `nickname` = ? , `email`='?', `password`='?', `tel`='?' ");
 
 		sb.append(" WHERE `memberNum`=? ; ");
 
@@ -278,14 +287,16 @@ public class Member {
 			pstmt = conn.prepareStatement(sb.toString());
 
 			pstmt.setString(1, memberdto.getName());
+			
+			pstmt.setString(2, memberdto.getNickname());
 
-			pstmt.setString(2, memberdto.getEmail());
+			pstmt.setString(3, memberdto.getEmail());
 
-			pstmt.setString(3, memberdto.getPassword());
+			pstmt.setString(4, memberdto.getPassword());
 
-			pstmt.setString(4, memberdto.getTel());
+			pstmt.setString(5, memberdto.getTel());
 
-			pstmt.setInt(5, memberdto.getMembernum());
+			pstmt.setInt(6, memberdto.getMembernum());
 
 			pstmt.executeUpdate();
 

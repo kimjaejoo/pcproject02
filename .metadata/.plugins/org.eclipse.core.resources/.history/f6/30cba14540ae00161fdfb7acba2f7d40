@@ -1,0 +1,19 @@
+package test;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+public class time {
+	public static void main(String[] args) {
+		Calendar date3 = Calendar.getInstance();
+		date3.setTimeInMillis(System.currentTimeMillis());
+
+		Calendar date4 = Calendar.getInstance();
+		date4.setTimeInMillis(System.currentTimeMillis() + 1000 * 60 * 6);
+	
+		System.out.println("지금시간 : " + date3.get(Calendar.HOUR)+"시"+date3.get(Calendar.MINUTE)+"분");
+		System.out.println();
+		
+	}
+}

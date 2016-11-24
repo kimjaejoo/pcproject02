@@ -1,0 +1,7 @@
+package co.kr.jaejoo.pcClient;
+
+import javax.swing.JPanel;
+
+public interface main {
+	JPanel panel01();
+}

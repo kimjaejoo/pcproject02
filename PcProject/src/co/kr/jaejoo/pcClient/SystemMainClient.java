@@ -3,6 +3,7 @@ package co.kr.jaejoo.pcClient;
 import java.awt.Component;
 import java.awt.Rectangle;
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -11,7 +12,10 @@ import javax.swing.JFrame;
 import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 
+import co.ko.jaejoo.dao.Member;
+
 import co.kr.jaejoo.asset.Setting;
+
 import co.kr.jaejoo.panel.ClockMessage;
 import co.kr.jaejoo.panel.ImgClock;
 import co.kr.jaejoo.panel.MyStarPanel;
@@ -32,7 +36,24 @@ public class SystemMainClient extends JFrame {
 	PanSeat[] pan = new PanSeat[50];
 	JPanel seat50 = new JPanel();
 
-	public SystemMainClient() throws Exception {
+	int playerNo;
+	int userNo;
+	private Member member;
+	
+	private UserMainClient mainClient;
+	UserLoginClient loginClient;
+	
+	public SystemMainClient() {
+	}
+
+	public SystemMainClient(int playerNo) throws Exception {
+		this.playerNo = playerNo;
+		// 넘겨받은 사용자번호
+	//	System.out.println("사용자 번호 : " + playerNo);
+		
+		
+		System.out.println(" userFrame에서 넘겨받은 사용자번호 " + playerNo);
+		
 		// Configure this Frame
 		setLayout(null);
 		setVisible(true);
@@ -41,6 +62,16 @@ public class SystemMainClient extends JFrame {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLocation(Setting.locationX, Setting.locationY);
 
+		// 사용자들의 정보를 담기위한 공간을 생성합니다. 사용자가 로그인하면 사용자의 번호가 list에 저장됩니다.
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		
+		
+		list.add(playerNo);
+		for(Integer i : list){
+			System.out.println(list.size());
+			System.out.println("저장된 사용자번호 : " + i);
+		}
+		
 		// 좌석을 넣기위한작업을 합니다.
 		for (int seat = 0; seat < 50; seat++) {
 			pan[seat] = new PanSeat(seat);
@@ -52,16 +83,12 @@ public class SystemMainClient extends JFrame {
 			posXpanSeat += 135;
 		}
 		new SeatThread().start();
-		
-		add(setJLayered(backGround, myStarPanel, imgClock, clockMessage , seat50));
+
+		// Settig class 안에 선언한 변수의 이름과 같게 설정해야한다.
+		add(setJLayered(backGround, myStarPanel, imgClock, clockMessage, seat50));
 		add(layeredPane);
 	}
 
-	public static void main(String[] args) throws Exception {
-		SystemMainClient manageView = new SystemMainClient();
-		manageView.setRectangles(SystemMainClient.class, manageView, Setting.class, Setting.getInstance());
-
-	}
 
 	// Reflection을 이용한 리팩토링을 하기위한 메소드 생성
 
@@ -73,7 +100,7 @@ public class SystemMainClient extends JFrame {
 		return layeredPane;
 	}
 
-	// Reflection Practice
+	// Reflection Practice 다른 클래스의 정보를 가지고 와서 사용한다. 변수의 이름을 같게하면 된다
 	public void setRectangles(Class<?> clazz, Object instance, Class<?> targetClass, Object target) throws Exception {
 		Object tempObject = null;
 		for (Field field : clazz.getDeclaredFields()) {
@@ -113,8 +140,9 @@ public class SystemMainClient extends JFrame {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-
 		}
 	}
 
+	// 자석을 선택하면 사용자와의 chat창을 불러오기위한 것을 설정한다.
+	
 }

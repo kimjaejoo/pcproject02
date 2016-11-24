@@ -1,0 +1,89 @@
+package co.kr.jaejoo.pcClient;
+
+import co.ko.jaejoo.dao.Member;
+import co.ko.jaejoo.dao.MemberDTO;
+import co.kr.jaejoo.asset.Setting;
+import co.kr.jaejoo.chat.client.ClientBackground;
+import co.kr.jaejoo.chat.server.ServerBackground;
+import co.kr.jaejoo.model.UserDao;
+
+
+@SuppressWarnings({"static-access","unused"})
+public class MainProcess {
+
+	// 로그인
+	private static UserLoginClient loginClient;
+	// 회원가입
+	private static UserJoinClient joinClient;
+	// main controller
+	private static SystemMainClient mainClient;
+	// UserUi
+	public static UserMainClient userClient; 
+	
+	//server와 연결하기 위한 변수를 선언합니다.
+	private ClientBackground background = new ClientBackground();
+	
+	private Member mem = new Member();
+	private MemberDTO dto;
+	
+	public static void main(String[] args) {
+		MainProcess main = new MainProcess();
+		main.loginClient = new UserLoginClient();
+		main.loginClient.setMain(main);
+		
+	}
+
+	// 되돌아가는 버튼을 활성화합니다. 회원가입을 완료하거나 회원가입을 취소 아니면 로그아웃을 하면 원래의 화면으로 돌아갑니다.
+	public void loginFrame( UserJoinClient userJoinClient ){
+		System.out.println("로그인 화면으로 되돌아갑니다.");
+		joinClient.dispose();
+		main(null);
+		
+	}
+
+	/*
+	 * 자바의 특징중의 하나인 reflection을 사용하기 위한 setting 내가 이해한 reflection이란? singleton의
+	 * 설정을 가지고 있는 setting 클래스를 생성하고 그안의 변수의 이름과 사용하고자 하는 메인 클래스안의 변수를 같게 설정하면
+	 * 두개의 변수이름을 검색하고 같으면 그 설정을 사용한다. 이것을 reflection을 사용한 리팩토링이라고 한다.
+	 */
+	public void mainFrame(int playerNo) throws Exception {
+		loginClient.dispose();
+		System.out.println("넘겨받은 사용자의 번호 : " + playerNo);
+		System.out.println("로그인성공");
+		this.mainClient = new SystemMainClient(playerNo);
+		this.mainClient.setRectangles(SystemMainClient.class, mainClient, Setting.class, Setting.getInstance());
+	}
+
+	public void joinFrame() {
+		loginClient.dispose();
+		System.out.println("회원가입");
+		this.joinClient = new UserJoinClient();
+	}
+	
+	public void userFrame(int playerNo) throws Exception{
+		loginClient.dispose();
+		System.out.println("사용자 권한으로 UserUI에 접속합니다");
+		System.out.println("넘겨받은 사용자번호 : " + playerNo);
+		
+		// 닉네임을 설정하기 위하여 선택합니다. 
+		dto = mem.selectOne(playerNo);
+		// 사용자가 로그인을 하고 서버와 연결합니다.
+		//background.setGui(userClient);
+		//background.connet();
+		
+		// 사용자의 정보를 시스템과 사용자 프레임에 정보를 보내야한다....
+		
+		// userFrame을 띄웁니다.
+		background.setGui(userClient);
+		background.setNickname("회원번호 : " + dto.getMembernum() + dto.getNickname());
+		background.connet();
+
+		this.userClient = new UserMainClient(playerNo); // 사용자의 frame안에 사용자번호를 보내는것을 했습니다.
+		this.userClient.setRectangles(UserMainClient.class, userClient, Setting.class, Setting.getInstance());
+		
+		// 사용자가 로그인을 하면 서버에 사용자의 정보를 보냅니다.
+	}	
+		
+}
+
+

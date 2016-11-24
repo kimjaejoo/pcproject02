@@ -1,4 +1,4 @@
-package co.kr.jaejoo.pcClient;
+package test;
 
 import java.awt.BorderLayout;
 
@@ -11,8 +11,6 @@ import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
 import javax.swing.JTextField;
-
-import co.kr.jaejoo.util.PCClientbackground;
 
 
 

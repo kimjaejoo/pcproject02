@@ -5,6 +5,7 @@ public class MemberDTO {
 	
 	private int membernum;
 	private String name ;
+	private String nickname;
 	private String email;
 	private String password;
 	private String tel;
@@ -16,17 +17,26 @@ public class MemberDTO {
 		System.out.println("기본생성자 호출");
 	}
 
-	public MemberDTO(int membernum, String name, String email, String password, String tel, String joindata, int admin,
-			String totaltime) {
+	public MemberDTO(int membernum, String name, String nickname, String email, String password, String tel,
+			String joindata, int admin, String totaltime) {
 		super();
 		this.membernum = membernum;
 		this.name = name;
+		this.nickname = nickname;
 		this.email = email;
 		this.password = password;
 		this.tel = tel;
 		this.joindata = joindata;
 		this.admin = admin;
 		this.totaltime = totaltime;
+	}
+
+	public String getNickname() {
+		return nickname;
+	}
+
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
 	}
 
 	public int getMembernum() {

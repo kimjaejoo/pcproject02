@@ -1,4 +1,4 @@
-package co.kr.jaejoo.pcClient;
+package test;
 
 import java.awt.BorderLayout;
 
@@ -12,9 +12,8 @@ import javax.swing.JTextArea;
 
 import javax.swing.JTextField;
 
-import co.kr.jaejoo.util.PCserverBackground;
 
-
+@SuppressWarnings("serial")
 public class PcServerGui extends JFrame implements ActionListener {
 
 	private JTextArea chatarea = new JTextArea();

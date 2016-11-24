@@ -1,0 +1,5 @@
+package co.ko.jaejoo.dao;
+
+public class PlayerInfo {
+	int playerNo;
+}

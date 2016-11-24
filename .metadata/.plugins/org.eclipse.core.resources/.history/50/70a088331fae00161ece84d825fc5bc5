@@ -1,0 +1,9 @@
+package co.kr.jaejoo.pcClient;
+
+import javax.swing.JFrame;
+import javax.swing.JLayeredPane;
+import javax.swing.JPanel;
+
+public interface main {
+	JFrame panel01(int playerNo);
+}
