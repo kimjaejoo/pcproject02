@@ -3,6 +3,7 @@ package co.kr.jaejoo.chat.server;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Collections;
@@ -50,6 +51,7 @@ public class ServerBackground {
 
 	// 맵의내용(클라이언트) 저장과 삭제
 	public void addClient(String nick, DataOutputStream out, int playerNo) throws IOException {
+		//String ip = InetAddress.getLocalHost().getHostAddress();
 		sendMessage(nick + "님이 접속하셨습니다.");
 		clientsMap.put(nick, out);
 	}
@@ -72,6 +74,8 @@ public class ServerBackground {
 			}
 		}
 	}
+	
+	
 
 	// -----------------------------------------------------------------------------
 	class Receiver extends Thread {

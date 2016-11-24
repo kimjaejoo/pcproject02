@@ -3,6 +3,8 @@ package co.kr.jaejoo.chat.client;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.Scanner;
 
 import javax.swing.JFrame;
@@ -49,8 +51,14 @@ public class ClientGui  extends JFrame implements ActionListener{
 	//말치면 보내는 부분
 	public void actionPerformed(ActionEvent e) {
 		String msg = nickName+ ":" + jtf.getText()+"\n";
-		client.sendMessage(msg);
-		jtf.setText("");
+		String ip;
+		try {
+			ip = InetAddress.getLocalHost().getHostAddress();
+			client.sendMessage(msg);
+			jtf.setText("");
+		} catch (UnknownHostException e1) {
+			e1.printStackTrace();
+		}
 	}
 
 	public void appendMsg(String msg) {

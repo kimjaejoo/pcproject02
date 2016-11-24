@@ -1,0 +1,8 @@
+package co.kr.jaejoo.panel;
+
+import javax.swing.JPanel;
+
+@SuppressWarnings("serial")
+public class userMain extends JPanel{
+	// 하나의 판넬....여기서 내가 추가할 내용들의 label, textfiled들을 설정한다? 그리고 한번에 용한다...?
+}

@@ -1,9 +1,0 @@
-package co.kr.jaejoo.pcClient;
-
-import java.awt.Rectangle;
-
-public class Setting {
-	public static Rectangle layeredPane = bRectangle;
-    public static Rectangle backGround = bRectangle;
-    public static Rectangle myStarPanel = bRectangle;
-}

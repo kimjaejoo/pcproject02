@@ -44,6 +44,7 @@ public class ClockMessage extends JPanel implements Runnable {
 			timeLabel.setText(sdf.format(new Date()));
 		} while (true);
 	}
+	
 	//Setting Methods
 	private JComponent setLable(JComponent component){
 		component.setForeground(Setting.bColor);

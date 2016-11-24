@@ -1,0 +1,45 @@
+package co.kr.jaejoo.panel;
+
+
+import javax.swing.JButton;
+import javax.swing.JComponent;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import co.kr.jaejoo.asset.Setting;
+import co.kr.jaejoo.pcClient.UserMainClient;
+
+@SuppressWarnings("serial")
+public class userMain extends JPanel{
+	// 하나의 판넬....여기서 내가 추가할 내용들의 label, textfiled들을 설정한다? 그리고 한번에 용한다...?
+	private JLabel playerSeatNo, playerName, playTime, playerCoin;
+	private JButton chatOn;
+	
+	public userMain() {
+		
+		setLayout(null);
+		
+		playerSeatNo = new JLabel("자리번호 : ");
+		playerName = new JLabel("사용자 이름 : ");
+		playerCoin = new JLabel("사용금액 : ");
+		playTime = new JLabel("사용시간 : ");
+		chatOn = new JButton("1:1 대화"); // chatting을 띄우는 버튼입니다.
+		
+		setLable(playerSeatNo).setBounds(Setting.playerSeatNo);
+		setLable(playerName).setBounds(Setting.playerName);
+		setLable(playerCoin).setBounds(Setting.playerCoin);
+		setLable(playTime).setBounds(Setting.playTime);
+		
+		add(playerSeatNo);
+		add(playerName);
+		add(playerCoin);
+		add(playTime);
+		
+	}
+	private JComponent setLable(JComponent component){
+		component.setForeground(Setting.bColor);
+		component.setFont(Setting.bFont);
+		return component;
+	}
+	
+}

@@ -103,7 +103,9 @@ public class MemberDTO {
 		this.totaltime = totaltime;
 	}
 	
-	
+	public Member setPlayerNo(Member playerNo){
+		return playerNo ;
+	}
 	
 	
 	

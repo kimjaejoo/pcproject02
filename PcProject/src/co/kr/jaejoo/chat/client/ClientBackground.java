@@ -3,6 +3,7 @@ package co.kr.jaejoo.chat.client;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.net.InetAddress;
 import java.net.Socket;
 
 import co.kr.jaejoo.pcClient.SystemMainClient;
@@ -25,7 +26,8 @@ public class ClientBackground {
 	
 	public void connet() {
 		try {
-			socket = new Socket("127.0.0.1", 7777);
+			String ip = InetAddress.getLocalHost().getHostAddress();
+			socket = new Socket(ip, 7777);
 			System.out.println("서버 연결됨.");
 
 			out = new DataOutputStream(socket.getOutputStream());
@@ -35,6 +37,7 @@ public class ClientBackground {
 			while (in != null) {
 				msg = in.readUTF();
 				gui.appendMsg(msg);
+				
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -53,6 +56,8 @@ public class ClientBackground {
 			e.printStackTrace();
 		}
 	}
+	
+	
 
 	public void setNickname(String nickName) {
 		this.nickName = nickName;
@@ -69,10 +74,15 @@ public class ClientBackground {
 	public final void setGui(UserMainClient userClient) {
 		this.userClient = userClient;
 	}
+	
+	public final void setUserClient(UserMainClient userClient) {
+		this.userClient = userClient;
+	}
 
-	public void setSystemClient(SystemMainClient systemClient) {
+	public final void setSystemClient(SystemMainClient systemClient) {
 		this.systemClient = systemClient;
 	}
+
 	
 	
 

@@ -1,0 +1,44 @@
+package co.kr.jaejoo.panel;
+
+import javax.swing.JButton;
+import javax.swing.JComponent;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+import co.kr.jaejoo.asset.Setting;
+
+@SuppressWarnings("serial")
+public class joinClient extends JPanel{
+	private JTextField loginId;
+	private JPasswordField loginPw;
+	private JButton loginBtn, joinBtn, googleBtn;
+	
+	public joinClient() {
+		setLayout(null);
+		
+		loginId = new JTextField("test@test.com");
+		loginPw = new JPasswordField("1111");
+		loginBtn = new JButton("LOGIN");
+		joinBtn = new JButton("JOIN");
+		googleBtn = new JButton("GOOGLE SIGNUP");
+		
+		setLable(loginId).setBounds(Setting.loginId);
+		setLable(loginPw).setBounds(Setting.loginPw);
+		setLable(loginBtn).setBounds(Setting.loginBtn);
+		setLable(joinBtn).setBounds(Setting.joinBtn);
+		setLable(googleBtn).setBounds(Setting.googleBtn);
+		
+		add(loginId);
+		add(loginPw);
+		add(loginBtn);
+		add(joinBtn);
+		add(googleBtn);
+	}
+	
+	private JComponent setLable(JComponent component){
+		component.setForeground(Setting.bColor);
+		component.setFont(Setting.bFont);
+		return component;
+	}
+}

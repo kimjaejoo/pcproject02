@@ -1,9 +1,0 @@
-package co.kr.jaejoo.field;
-
-public class Snippet {
-	Rectangle rectangle = (Rectangle) targetClass.getDeclaredField(field.getName()).get(target);
-	                ((JComponent) tempObject).setBounds(rectangle);
-	                ((JComponent) tempObject).setOpaque(false);
-	                ((JComponent) tempObject).setLayout(null);
-}
-

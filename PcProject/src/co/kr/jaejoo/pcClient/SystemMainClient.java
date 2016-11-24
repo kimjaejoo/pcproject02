@@ -13,13 +13,14 @@ import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 
 import co.ko.jaejoo.dao.Member;
-
+import co.ko.jaejoo.dao.MemberDTO;
 import co.kr.jaejoo.asset.Setting;
 
 import co.kr.jaejoo.panel.ClockMessage;
 import co.kr.jaejoo.panel.ImgClock;
 import co.kr.jaejoo.panel.MyStarPanel;
 import co.kr.jaejoo.panel.PanImgload;
+import co.kr.jaejoo.panel.PanSeat;
 
 @SuppressWarnings("serial")
 public class SystemMainClient extends JFrame {
@@ -39,9 +40,9 @@ public class SystemMainClient extends JFrame {
 	int playerNo;
 	int userNo;
 	private Member member;
-	
+	private MemberDTO dto = new MemberDTO();
 	private UserMainClient mainClient;
-	UserLoginClient loginClient;
+	private UserLoginClient loginClient;
 	
 	public SystemMainClient() {
 	}
@@ -51,10 +52,12 @@ public class SystemMainClient extends JFrame {
 		// 넘겨받은 사용자번호
 	//	System.out.println("사용자 번호 : " + playerNo);
 		
+		// 사용자 번호를 다른 panel을 상속받는 클래스에 전송합니다.
+		
+		
 		
 		System.out.println(" userFrame에서 넘겨받은 사용자번호 " + playerNo);
 		
-		// Configure this Frame
 		setLayout(null);
 		setVisible(true);
 		setTitle("ManageView");
@@ -66,11 +69,11 @@ public class SystemMainClient extends JFrame {
 		ArrayList<Integer> list = new ArrayList<Integer>();
 		
 		
-		list.add(playerNo);
+		/*list.add(playerNo);
 		for(Integer i : list){
 			System.out.println(list.size());
 			System.out.println("저장된 사용자번호 : " + i);
-		}
+		}*/
 		
 		// 좌석을 넣기위한작업을 합니다.
 		for (int seat = 0; seat < 50; seat++) {

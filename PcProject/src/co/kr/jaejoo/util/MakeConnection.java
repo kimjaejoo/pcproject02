@@ -28,7 +28,7 @@ public class MakeConnection {
 				Driver driver = (Driver) driver_class.newInstance();
 				DriverManager.registerDriver(driver);
 				conn = DriverManager.getConnection(url , user, password);
-				System.out.println("db연결성공");
+			//	System.out.println("db연결성공");
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 				System.out.println("드라이버로딩 실패");
