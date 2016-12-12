@@ -35,7 +35,7 @@ public class PanSeat extends JPanel {
 	public PanSeat(int numSeat) {
 		this.numSeat = numSeat;
 		
-		System.out.println(dto.getMembernum());
+		//System.out.println(dto.getMembernum());
 		
 		// 사용자 좌석 50개의 정보를 가지고 와서 메모리안에 저장합니다
 		for(Integer i : list){

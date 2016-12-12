@@ -16,7 +16,7 @@ public class ServerGui extends JFrame implements ActionListener {
 	private JTextField jtf = new JTextField(25);
 	private ServerBackground server = new ServerBackground();
 
-	public ServerGui() throws IOException {
+	public ServerGui() throws Exception {
 
 		add(jta, BorderLayout.CENTER);
 		add(jtf, BorderLayout.SOUTH);
@@ -31,7 +31,7 @@ public class ServerGui extends JFrame implements ActionListener {
 		server.setting();
 	}
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 		new ServerGui();
 	}
 

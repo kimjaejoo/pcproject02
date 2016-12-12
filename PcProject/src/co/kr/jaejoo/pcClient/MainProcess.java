@@ -23,7 +23,8 @@ public class MainProcess {
 	public static UserMainClient userClient; 
 	
 	//server와 연결하기 위한 변수를 선언합니다.
-	private ClientBackground background = new ClientBackground();
+	public static ClientBackground background = new ClientBackground();
+	public static ServerBackground serverBackground = new ServerBackground();
 	
 	private Member mem = new Member();
 	private MemberDTO dto;
@@ -51,11 +52,20 @@ public class MainProcess {
 	 * 두개의 변수이름을 검색하고 같으면 그 설정을 사용한다. 이것을 reflection을 사용한 리팩토링이라고 한다.
 	 */
 	public void mainFrame(int playerNo) throws Exception {
+		
 		loginClient.dispose();
 		System.out.println("넘겨받은 사용자의 번호 : " + playerNo);
 		System.out.println("로그인성공");
+		
 		this.mainClient = new SystemMainClient(playerNo);
-		this.mainClient.setRectangles(SystemMainClient.class, mainClient, Setting.class, Setting.getInstance());
+		serverBackground.setSystemMainClient(mainClient);
+		
+		
+		// 현재 systemMainClient를 연결하면 서버단에서 panel을 불러오지 못하는거 같음
+		// reflection을 사용하지 않고 클래스단에 모든 정보를 넣어두었을때는 panel의 정보를 불러 올 수 있었음
+		
+		serverBackground.setting();
+		// mainFrame에 접속하면 systemMain은 server가 되어 사용자의 번호와 ip를 전송받습니다.
 	}
 
 	public void joinFrame() {

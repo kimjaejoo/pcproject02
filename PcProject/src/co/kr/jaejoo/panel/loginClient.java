@@ -19,7 +19,7 @@ import co.kr.jaejoo.pcClient.MainProcess;
 import co.kr.jaejoo.pcClient.SystemMainClient;
 import co.kr.jaejoo.pcClient.UserMainClient;
 
-@SuppressWarnings({ "serial", "deprecation", "static-access" })
+@SuppressWarnings({ "serial", "deprecation", "static-access", "unused"})
 public class loginClient extends JPanel implements ActionListener {
 	private JTextField loginId;
 	private JPasswordField loginPw;
@@ -38,13 +38,13 @@ public class loginClient extends JPanel implements ActionListener {
 	String telregex = "^01(?:0|1|[6-9])(?:\\d{3}|\\d{4})\\d{4}$";
 
 	private MainProcess main = new MainProcess();
-	public SystemMainClient mainClient = new SystemMainClient();
-	public UserMainClient userClient = new UserMainClient();
-
+	private SystemMainClient mainClient;
+	private UserMainClient userClient;
+	
 	public loginClient() {
 		setLayout(null);
 
-		loginId = new JTextField("test@test.com");
+		loginId = new JTextField("kjj0710@naver.com");
 		loginPw = new JPasswordField("1111");
 		loginBtn = new JButton("LOGIN");
 		joinBtn = new JButton("JOIN");
@@ -120,7 +120,6 @@ public class loginClient extends JPanel implements ActionListener {
 
 							try {
 								main.mainFrame(playerNo);
-								
 							} catch (Exception e1) {
 								e1.printStackTrace();
 							}

@@ -47,10 +47,9 @@ public class UserMainClient extends JFrame {
 	private SystemMainClient systemMainClient;
 	// 로그인시 사용자의 값을 받아와야합니다.
 	private PanSeat panSeat;
-	public UserMainClient() {
 	
-	}
-
+	
+	
 	public UserMainClient(int playerNo) throws Exception {
 		this.playerNo = playerNo;
 		// mainProcess 에서 받아온 값입니다.

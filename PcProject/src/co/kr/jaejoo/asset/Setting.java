@@ -100,6 +100,5 @@ public class Setting {
 		return instance;
 	}
 
-	private Setting() {
-	}
+	private Setting() {}
 }
