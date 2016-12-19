@@ -1,0 +1,16 @@
+package co.kr.jaejoo.asset;
+
+import java.lang.reflect.Field;
+
+public class ReflectTest {
+
+	public static void main(String[] args) {
+		Class<?> cls = Class.forName("ReflectCls");
+		
+		Field[] fields = cls.getFields();
+		for(Field field : fields){
+			System.out.println(field.getType().getName() + " " + field.getName() );
+		} 
+	}
+
+}

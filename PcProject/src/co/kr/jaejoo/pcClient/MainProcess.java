@@ -1,5 +1,8 @@
 package co.kr.jaejoo.pcClient;
 
+import javax.swing.JLayeredPane;
+import javax.swing.text.LayeredHighlighter;
+
 import co.ko.jaejoo.dao.Member;
 import co.ko.jaejoo.dao.MemberDTO;
 import co.kr.jaejoo.asset.Setting;
@@ -21,6 +24,8 @@ public class MainProcess {
 	private static SystemMainClient mainClient;
 	// UserUi
 	public static UserMainClient userClient; 
+	
+	public JLayeredPane layeredPane = new JLayeredPane();
 	
 	//server와 연결하기 위한 변수를 선언합니다.
 	public static ClientBackground background = new ClientBackground();
@@ -58,8 +63,8 @@ public class MainProcess {
 		System.out.println("로그인성공");
 		
 		this.mainClient = new SystemMainClient(playerNo);
-		serverBackground.setSystemMainClient(mainClient);
-		
+		serverBackground.setSystemMainClient(mainClient, layeredPane);
+
 		
 		// 현재 systemMainClient를 연결하면 서버단에서 panel을 불러오지 못하는거 같음
 		// reflection을 사용하지 않고 클래스단에 모든 정보를 넣어두었을때는 panel의 정보를 불러 올 수 있었음

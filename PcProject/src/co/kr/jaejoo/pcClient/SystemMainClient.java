@@ -53,6 +53,7 @@ public class SystemMainClient extends JFrame {
 		
 	}
 
+	@SuppressWarnings("static-access")
 	public SystemMainClient(int playerNo) throws Exception {
 		this.playerNo = playerNo;
 		// 넘겨받은 사용자번호
@@ -149,6 +150,12 @@ public class SystemMainClient extends JFrame {
 				e.printStackTrace();
 			}
 		}
+	}
+	
+	SystemMainClient mainClient;
+
+	public void setSystemMainClient(SystemMainClient mainClient) {
+		this.mainClient = mainClient;
 	}
 
 	// 자석을 선택하면 사용자와의 chat창을 불러오기위한 것을 설정한다.

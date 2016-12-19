@@ -7,10 +7,6 @@ import java.awt.Point;
 import java.awt.Rectangle;
 import java.awt.Toolkit;
 
-import co.ko.jaejoo.dao.Member;
-import co.ko.jaejoo.dao.MemberDTO;
-import co.ko.jaejoo.dao.MemberDao;
-
 public class Setting {
 	// inner variables for those public Variables
 	private static int width = 1600, height = 900;

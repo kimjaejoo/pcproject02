@@ -13,6 +13,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import javax.swing.JLayeredPane;
+
 import co.kr.jaejoo.asset.Setting;
 import co.kr.jaejoo.pcClient.MainProcess;
 import co.kr.jaejoo.pcClient.SystemMainClient;
@@ -29,6 +31,10 @@ public class ServerBackground {
 	public SystemMainClient mainClient;
 	public static MainProcess mainProcess;
 
+	public JLayeredPane layeredPane = new JLayeredPane();
+	
+	
+	
 	/** XXX 03. 세번째 중요한것. 사용자들의 정보를 저장하는 맵입니다. */
 	private Map<String, DataOutputStream> clientsMap = new HashMap<String, DataOutputStream>();
 
@@ -140,5 +146,10 @@ public class ServerBackground {
 	public final void setMainProcess(MainProcess mainProcess) throws Exception {
 		mainClient.setRectangles(SystemMainClient.class, mainClient, Setting.class, Setting.getInstance());
 		this.mainProcess = mainProcess;
+	}
+
+	public void setSystemMainClient(SystemMainClient mainClient, JLayeredPane layeredPane) {
+		this.mainClient = mainClient;
+		this.layeredPane = layeredPane;
 	}
 }
