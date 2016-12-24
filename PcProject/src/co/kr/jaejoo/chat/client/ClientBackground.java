@@ -28,10 +28,10 @@ public class ClientBackground {
 		try {
 			String ip = InetAddress.getLocalHost().getHostAddress();
 			socket = new Socket(ip, 7777);
-			System.out.println("서버 연결됨.");
 
 			out = new DataOutputStream(socket.getOutputStream());
 			in = new DataInputStream(socket.getInputStream());
+			out.writeUTF("hi");
 
 			System.out.println("클라이언트 : 메시지 전송완료");
 			while (in != null) {

@@ -48,6 +48,7 @@ public class ServerBackground {
 	public void setting() throws IOException {
 		Collections.synchronizedMap(clientsMap); // 이걸 교통정리 해줍니다^^
 		serverSocket = new ServerSocket(7777);
+		serverSocket.c
 		while (true) {
 			/** XXX 01. 첫번째. 서버가 할일 분담. 계속 접속받는것. */
 			System.out.println(getTime() + "연결요청을 기다립니다.");
@@ -125,7 +126,6 @@ public class ServerBackground {
 					gui.appendMsg(msg);
 				}
 			} catch (IOException e) {
-				// 사용접속종료시 여기서 에러 발생. 그럼나간거에요.. 여기서 리무브 클라이언트 처리 해줍니다.
 				removeClient(nick);
 			}
 		}
